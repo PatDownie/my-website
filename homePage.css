@@ -21,6 +21,7 @@ body {
 .leftSquiggle1,
 .rightSquiggle1 {
   top: 0;
+  z-index: -1;
 
   max-width: 200px;
 
@@ -36,7 +37,7 @@ body {
 .leftSquiggle2,
 .rightSquiggle2 {
   bottom: 0;
-  z-index: -1;
+  z-index: -2;
 
   max-width: 150px;
 
@@ -52,7 +53,7 @@ body {
 .leftSquiggle3,
 .rightSquiggle3 {
   top: 0;
-  z-index: -2;
+  z-index: -3;
 
   max-width: 100px;
 
@@ -89,119 +90,191 @@ body {
 
 /* content code */
 
-.contentContainer {
-  margin: 0 180px;
-  height: 100vh;
+@media (min-width: 1250px) {
+  .contentContainer {
+    margin: 0 180px;
+    height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* overflow: hidden; */
-
-  /* background-color: aqua; */
-}
-
-a {
-  font-family: "Rubik", sans-serif;
-  font-size: 10rem;
-  text-decoration: none;
-
-  text-align: center;
-}
-
-.bigLink {
-  display: inline-block;
-  color: #202020;
-  text-shadow: 0px 0px #913a11, 0px 0px #e0b967;
-  transition: 0.5s;
-  animation: onLoad 2s 1;
-}
-.bigLinkContainer {
-  /* background-color: aqua; */
-  position: relative;
-}
-.bigLinkContainer:hover {
-  cursor: pointer;
-}
-
-#bl1 {
-  animation: onLoad 1.5s 1;
-}
-.bigLinkContainer:hover #bl1 {
-  text-shadow: 10px 10px #913a11, 20px 20px #e0b967;
-  transform: translateY(-90%);
-}
-#bl21 {
-  animation: onLoad 2s 1;
-  margin-right: 3rem;
-}
-.bigLinkContainer:hover #bl21 {
-  text-shadow: 10px 10px #913a11, 20px 20px #e0b967;
-  transform: translateX(-140px);
-}
-.bigLinkContainer:hover #bl22 {
-  text-shadow: 10px 10px #913a11, 20px 20px #e0b967;
-  transform: translateX(140px);
-}
-#bl3 {
-  animation: onLoad 2.5s 1;
-}
-.bigLinkContainer:hover #bl3 {
-  text-shadow: 10px 10px #913a11, 20px 20px #e0b967;
-  transform: translateY(90%);
-}
-
-/* .bigLink:hover {
-  text-shadow: 10px 10px #913a11, 20px 20px #e0b967;
-} */
-
-@keyframes onLoad {
-  0% {
-    transform: translateY(100vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  100% {
-    transform: translateY(0vw);
+
+  a {
+    font-family: "Rubik", sans-serif;
+    font-size: 10rem;
+    text-decoration: none;
+
+    text-align: center;
+  }
+
+  .bigLink {
+    display: inline-block;
+    color: #202020;
+    text-shadow: 0px 0px #913a11, 0px 0px #e0b967;
+    transition: 0.5s;
+    animation: onLoad 2s 1;
+  }
+  .bigLinkContainer {
+    /* background-color: aqua; */
+    position: relative;
+  }
+  .bigLinkContainer:hover {
+    cursor: pointer;
+  }
+
+  #bl1 {
+    animation: onLoad 1.5s 1;
+  }
+  .bigLinkContainer:hover #bl1 {
+    text-shadow: 10px 10px #913a11, 20px 20px #e0b967;
+    transform: translateY(-90%);
+  }
+  #bl21 {
+    animation: onLoad 2s 1;
+    margin-right: 3rem;
+  }
+  .bigLinkContainer:hover #bl21 {
+    text-shadow: 10px 10px #913a11, 20px 20px #e0b967;
+    transform: translateX(-140px);
+  }
+  .bigLinkContainer:hover #bl22 {
+    text-shadow: 10px 10px #913a11, 20px 20px #e0b967;
+    transform: translateX(140px);
+  }
+  #bl3 {
+    animation: onLoad 2.5s 1;
+  }
+  .bigLinkContainer:hover #bl3 {
+    text-shadow: 10px 10px #913a11, 20px 20px #e0b967;
+    transform: translateY(90%);
+  }
+
+  @keyframes onLoad {
+    0% {
+      transform: translateY(100vw);
+    }
+    100% {
+      transform: translateY(0vw);
+    }
+  }
+
+  .revealedContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: 0.4s;
+  }
+  #rc1 {
+    width: 500px;
+    text-align: right;
+  }
+  #rc1 img {
+    margin-left: 10px;
+  }
+
+  #rc2 {
+    transform: translate(-250px, -50%);
+    width: 290px;
+  }
+  #rc2 img {
+    margin-right: 10px;
+  }
+
+  .bigLinkContainer:hover .revealedContainer {
+    opacity: 1;
+  }
+
+  p {
+    color: #202020;
+    font-family: "Roboto Slab", serif;
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 
-.revealedContainer {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+/* ------------------------------------------------------------ */
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 1249px) {
+  .contentContainer {
+    /* background-color: aqua; */
+    margin: 0 10px;
+    height: 100vh;
 
-  opacity: 0;
-  transition: 0.4s;
-}
-#rc1 {
-  width: 500px;
-  text-align: right;
-}
-#rc1 img {
-  margin-left: 10px;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bigLinkContainer {
+    background-color: #404040ad;
+    backdrop-filter: blur(7px);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 40px;
+    max-width: 340px;
+    border: solid 1px #f8f0e5;
 
-#rc2 {
-  transform: translate(-250px, -50%);
-  width: 290px;
-}
-#rc2 img {
-  margin-right: 10px;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-.bigLinkContainer:hover .revealedContainer {
-  opacity: 1;
-}
+  .bigLinkContainer:hover {
+    background-color: #616161ad;
+  }
+  .bigLinkContainer:active {
+    background-color: #979797ad;
+  }
+  .bigLink {
+    font-family: "Rubik", sans-serif;
+    font-size: 3rem;
+    text-decoration: none;
 
-p {
-  color: #202020;
-  font-family: "Roboto Slab", serif;
-  font-size: 2rem;
-  font-weight: 500;
+    text-align: center;
+    color: #e0b967;
+    text-shadow: 4px 4px #913a11, 8px 8px #202020;
+    display: inline-block;
+    transform: translateX(-4px);
+
+    z-index: 2;
+
+    /* background-color: aqua; */
+  }
+  .revealedContainer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .revealedContainer p {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #e0b967;
+  }
+  #rc1 p {
+    text-align: center;
+  }
+  #rc2 p {
+    text-align: center;
+  }
+  #rc3 p {
+    text-align: center;
+  }
+  #bl21 {
+    margin-right: 4px;
+  }
+  .contentContainer img {
+    display: none;
+  }
 }
