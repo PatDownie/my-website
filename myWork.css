@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+}
+
+#pageContainer {
+  min-height: 100vh;
+  background-color: #466365;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* eyes vvvvvvvv */
+
+#leftContainer {
+  /* background-color: blue; */
+  width: calc((100vw - 600px) / 2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  overflow: hidden;
+
+  padding-right: 30px;
+  margin-top: -30px;
+}
+
+.leftRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+
+  margin-bottom: -75px;
+}
+
+.leftRow .eye {
+  margin-left: 66px;
+}
+
+.leftRow.LREven {
+  margin-right: 108px;
+}
+
+#rightContainer {
+  /* background-color: red; */
+  width: calc((100vw - 600px) / 2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  overflow: hidden;
+
+  padding-left: 30px;
+  margin-top: -30px;
+}
+
+.rightRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+
+  margin-bottom: -75px;
+}
+
+.rightRow .eye {
+  margin-right: 66px;
+}
+
+.rightRow.RREven {
+  margin-left: 108px;
+}
+
+.eye {
+  height: 150px;
+  width: 150px;
+  flex-shrink: 0;
+  background-color: #eaeaea;
+
+  border-radius: 100% 0px;
+  transform: rotate(45deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.pupil {
+  background-color: #d5a021;
+  width: 75px;
+  height: 75px;
+
+  border-radius: 50%;
+
+  transform: rotate(-45deg) translate(0px, 0px);
+}
+
+.blinking {
+  animation-name: scleraBlink;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+@keyframes scleraBlink {
+  0% {
+    transform: scaleY(1) rotate(45deg);
+  }
+  5% {
+    transform: scaleY(0) rotate(45deg);
+  }
+  100% {
+    transform: scaleY(1) rotate(45deg);
+  }
+}
+
+/* content vvvvvvvv */
+
+#contentContainer {
+  min-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color: aqua; */
+}
+
+.button {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  width: 400px;
+  height: 200px;
+  margin: 15px;
+  /* background-color: aqua; */
+
+  transition: 0.6s;
+  z-index: 1;
+}
+
+#squiggleBorder {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 100px;
+  transition: 0.7s;
+}
+
+#FODDiv2 {
+  height: 100%;
+  width: 100%;
+
+  background-color: rgb(100, 100, 100);
+  padding: 20px;
+  border-radius: 80px;
+  display: flex;
+  flex-direction: row;
+  transition: 0.6s;
+}
+
+#FODTextContainer {
+  margin-left: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: 0.6s;
+}
+
+p {
+  color: white;
+  font-family: "Inter", sans-serif;
+  transition: 0.6s;
+  /* width: 220px; */
+  /* font-size: 0; */
+}
+
+#fakeButtonDiv {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 0;
+  transition: 0.6s;
+  text-align: center;
+  width: 0px;
+}
+
+#FODLogo {
+  margin-left: 20px;
+  max-height: 100%;
+}
+
+#FODDiv:hover {
+  width: 550px;
+  height: 400px;
+  cursor: pointer;
+}
+#FODDiv:hover #FODDiv2 {
+  border-radius: 30px;
+  padding: 10px;
+  background-color: #1c1c1c;
+  /* background-color: aquamarine; */
+}
+
+#FODDiv:hover #squiggleBorder {
+  width: 600px;
+}
+
+#FODDiv:hover h1 {
+  color: #d8b65f;
+  font-size: 2rem;
+  font-weight: 800;
+}
+#FODDiv:hover #fakeButtonDiv {
+  background-color: #d8b65f;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  width: 180px;
+}
+
+#apolloDiv {
+  background-color: rgb(100, 100, 100);
+  padding: 20px;
+  border-radius: 80px;
+  display: flex;
+  flex-direction: row;
+
+  transition: 0.6s;
+  z-index: 1;
+}
+
+#apolloLogo {
+  max-height: 150px;
+  aspect-ratio: 1/1;
+}
+
+#h1Container {
+  display: flex;
+}
+
+#apolloTextContainer {
+  margin-left: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#fancyApolloHeader {
+  color: #f1ca3b;
+  font-family: "Sedgwick Ave", cursive;
+  font-size: 0px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+#apolloDiv:hover {
+  background-color: #3a6274;
+  border: 3px dashed #f1ca3b;
+  border-radius: 20px;
+  width: 550px;
+  height: 400px;
+  cursor: pointer;
+}
+
+#apolloDiv:hover #fancyApolloHeader {
+  font-size: 3rem;
+  margin-left: 10px;
+}
+#apolloDiv:hover #normalApolloHeader {
+  font-size: 0;
+}
+
+#apolloTextContainer p {
+  height: 100px;
+}
+
+#apolloDiv:hover #apolloTextContainer p {
+  color: black;
+  background-color: #ced3dc;
+  border-radius: 10px;
+  padding: 10px;
+  height: 200px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#apolloButtonDiv {
+  color: #3a6274;
+  background-color: #f1ca3b;
+  font-family: "Inter", sans-serif;
+  font-size: 0;
+  font-weight: 600;
+  transition: 0.6s;
+  text-align: center;
+  width: 0px;
+  align-self: center;
+}
+#apolloDiv:hover #apolloButtonDiv {
+  font-size: 1rem;
+  padding: 1rem 0;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 1.5rem;
+}
