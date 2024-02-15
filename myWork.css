@@ -8,6 +8,16 @@
 
   display: flex;
   justify-content: center;
+  animation: backgroundFade 2s forwards;
+}
+
+@keyframes backgroundFade {
+  0% {
+    background-color: #f8f0e5;
+  }
+  100% {
+    background-color: #466365;
+  }
 }
 
 /* eyes vvvvvvvv */
@@ -24,6 +34,8 @@
 
   padding-right: 30px;
   margin-top: -30px;
+
+  animation: eyesIn 2s;
 }
 
 .leftRow {
@@ -54,6 +66,8 @@
 
   padding-left: 30px;
   margin-top: -30px;
+
+  animation: eyesIn 2s;
 }
 
 .rightRow {
@@ -70,6 +84,15 @@
 
 .rightRow.RREven {
   margin-left: 108px;
+}
+
+@keyframes eyesIn {
+  0% {
+    width: calc((100vw - 100vw - 0px) / 2);
+  }
+  100% {
+    width: calc((100vw - 0vw - 600px) / 2);
+  }
 }
 
 .eye {
@@ -128,6 +151,19 @@
   align-items: center;
 
   /* background-color: aqua; */
+
+  animation: containerIn 2s;
+}
+
+@keyframes containerIn {
+  0% {
+    min-width: calc(100vw + 0px);
+    transform: translateY(100vh);
+  }
+  100% {
+    min-width: calc(0vw + 600px);
+    transform: translateY(0vh);
+  }
 }
 
 .button {
