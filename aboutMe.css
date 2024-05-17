@@ -8,13 +8,13 @@
   justify-content: center;
   align-items: center;
 
-  transition: 0.4s;
+  transition: 1s;
 }
 #pageContainer.lightMode {
-  background-color: white;
+  background-color: #f1f7ed;
 }
 #pageContainer.darkMode {
-  background-color: black;
+  background-color: #54494b;
 }
 #pageContainer.clownMode {
   background-color: hotpink;
@@ -24,8 +24,8 @@
   background-color: beige;
   width: 200px;
   height: 200px;
-  border: 4px solid red;
-  box-shadow: 1px 1px red, 2px 2px red, 3px 3px red, 4px 4px red, 5px 5px red, 6px 6px red, 7px 7px red, 8px 8px red, 9px 9px red, 10px 10px red;
+  border: 4px solid #e3d081;
+  box-shadow: 1px 1px #e3d081, 2px 2px #e3d081, 3px 3px #e3d081, 4px 4px #e3d081, 5px 5px #e3d081, 6px 6px #e3d081, 7px 7px #e3d081, 8px 8px #e3d081, 9px 9px #e3d081, 10px 10px #e3d081;
 
   display: flex;
   align-items: center;
@@ -45,15 +45,15 @@
 
 #gridContainer > * {
   margin: 15px;
-  border: 4px solid red;
-  box-shadow: 1px 1px red, 2px 2px red, 3px 3px red, 4px 4px red, 5px 5px red, 6px 6px red, 7px 7px red, 8px 8px red, 9px 9px red, 10px 10px red, 1px 1px red, 2px 2px red, 3px 3px red, 4px 4px red,
-    5px 5px red, 6px 6px red, 7px 7px red, 8px 8px red, 9px 9px red, 10px 10px red;
+  border: 4px solid #e3d081;
+  box-shadow: 1px 1px #e3d081, 2px 2px #e3d081, 3px 3px #e3d081, 4px 4px #e3d081, 5px 5px #e3d081, 6px 6px #e3d081, 7px 7px #e3d081, 8px 8px #e3d081, 9px 9px #e3d081, 10px 10px #e3d081,
+    1px 1px #e3d081, 2px 2px #e3d081, 3px 3px #e3d081, 4px 4px #e3d081, 5px 5px #e3d081, 6px 6px #e3d081, 7px 7px #e3d081, 8px 8px #e3d081, 9px 9px #e3d081, 10px 10px #e3d081;
   transition: 0.4s;
 }
 
 #gridContainer > .hoverable:hover {
-  box-shadow: 1px 1px red, 2px 2px red, 3px 3px red, 4px 4px red, 5px 5px red, 6px 6px red, 7px 7px red, 8px 8px red, 9px 9px red, 10px 10px red, 11px 11px red, 12px 12px red, 13px 13px red,
-    14px 14px red, 15px 15px red, 16px 16px red, 17px 17px red, 18px 18px red, 19px 19px red, 20px 20px red;
+  box-shadow: 1px 1px #e3d081, 2px 2px #e3d081, 3px 3px #e3d081, 4px 4px #e3d081, 5px 5px #e3d081, 6px 6px #e3d081, 7px 7px #e3d081, 8px 8px #e3d081, 9px 9px #e3d081, 10px 10px #e3d081,
+    11px 11px #e3d081, 12px 12px #e3d081, 13px 13px #e3d081, 14px 14px #e3d081, 15px 15px #e3d081, 16px 16px #e3d081, 17px 17px #e3d081, 18px 18px #e3d081, 19px 19px #e3d081, 20px 20px #e3d081;
   transform: translate(-10px, -10px);
 }
 
@@ -88,6 +88,7 @@
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
@@ -162,7 +163,7 @@
   animation-duration: 0.4s;
   animation-iteration-count: 1;
 }
-.startOff {
+.offScreen {
   transform: translateX(-300px);
 }
 
