@@ -46,18 +46,14 @@
 #gridContainer > * {
   margin: 15px;
   border: 4px solid red;
-  box-shadow: 1px 1px red, 2px 2px red, 3px 3px red, 4px 4px red, 5px 5px red,
-    6px 6px red, 7px 7px red, 8px 8px red, 9px 9px red, 10px 10px red,
-    1px 1px red, 2px 2px red, 3px 3px red, 4px 4px red, 5px 5px red, 6px 6px red,
-    7px 7px red, 8px 8px red, 9px 9px red, 10px 10px red;
+  box-shadow: 1px 1px red, 2px 2px red, 3px 3px red, 4px 4px red, 5px 5px red, 6px 6px red, 7px 7px red, 8px 8px red, 9px 9px red, 10px 10px red, 1px 1px red, 2px 2px red, 3px 3px red, 4px 4px red,
+    5px 5px red, 6px 6px red, 7px 7px red, 8px 8px red, 9px 9px red, 10px 10px red;
   transition: 0.4s;
 }
 
 #gridContainer > .hoverable:hover {
-  box-shadow: 1px 1px red, 2px 2px red, 3px 3px red, 4px 4px red, 5px 5px red,
-    6px 6px red, 7px 7px red, 8px 8px red, 9px 9px red, 10px 10px red,
-    11px 11px red, 12px 12px red, 13px 13px red, 14px 14px red, 15px 15px red,
-    16px 16px red, 17px 17px red, 18px 18px red, 19px 19px red, 20px 20px red;
+  box-shadow: 1px 1px red, 2px 2px red, 3px 3px red, 4px 4px red, 5px 5px red, 6px 6px red, 7px 7px red, 8px 8px red, 9px 9px red, 10px 10px red, 11px 11px red, 12px 12px red, 13px 13px red,
+    14px 14px red, 15px 15px red, 16px 16px red, 17px 17px red, 18px 18px red, 19px 19px red, 20px 20px red;
   transform: translate(-10px, -10px);
 }
 
@@ -115,8 +111,7 @@
   width: 30px;
   border-radius: 5px;
   border: none;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25),
-    -3px -3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -3px -3px 10px rgba(0, 0, 0, 0.25);
 
   font-size: 1rem;
 }
@@ -131,8 +126,7 @@
   height: calc(100% - 30px);
   /* margin: 15px; */
   border-radius: 15px;
-  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.25),
-    inset -3px -3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.25), inset -3px -3px 10px rgba(0, 0, 0, 0.25);
 
   overflow: hidden;
 }
@@ -167,6 +161,9 @@
   animation-name: enterLeft;
   animation-duration: 0.4s;
   animation-iteration-count: 1;
+}
+.startOff {
+  transform: translateX(-300px);
 }
 
 @keyframes leaveRight {
